@@ -17,6 +17,6 @@
 ```
 
 ## 🖥  View
-![plot](./public/screen.png)
+![plot](./src/assets/screen.png)
 
 ### Happy Coding! 🚀
