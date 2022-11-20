@@ -1,0 +1,20 @@
+.summary {
+  min-width: 600px;
+  width: 40%;
+  padding: 30px 60px;
+  color: var(--white-color);
+  background-color:var(--background-summary);
+  border-radius: 20px;
+}
+
+.summary h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.summary p {
+  font-size: 40px;
+  line-height: 30pt;
+  font-size: medium;
+}

@@ -1,0 +1,31 @@
+.item {
+  border-bottom: 1px solid var(--gray-color);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item p{
+  margin-bottom: 5px;
+}
+
+.item span{
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color)
+}
+
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+

@@ -5,7 +5,10 @@
 	--secondary-color: #4d1601;
 	--tertiary-color:  #2c0d00;
 	--white-color:  #ffffff;
-	--background-color:  #312d2d;
+	--gray-color:  #ccc;
+	--background-body:  #080808;
+	--background-summary:  #323131;
+	--overlay-color: #0e0e0eb5;
 }
 
 * {
@@ -25,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: var(--background-color);
+	background-color: var(--background-body);
 }
 ol, ul {
 	list-style: none;

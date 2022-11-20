@@ -1,0 +1,21 @@
+
+.item-form {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-form__amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.item-form__button {
+  text-align: left;
+  width: 70%;
+}

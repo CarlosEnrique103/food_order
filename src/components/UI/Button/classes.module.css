@@ -1,0 +1,25 @@
+.button {
+  width: 100%;
+  padding: 15px 5px;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  transition: background-color ease 500ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.button:focus, 
+.button:active {
+  outline: none;
+  border: none;
+}
+
+.button:hover, 
+.button:active {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
