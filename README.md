@@ -7,13 +7,13 @@
 1. React
 2. ES6
 3. Context
-4. Css MOdules
+4. Css Modules
 
 ## 🛠 Installing
 
 ```
-$ yarn
-$ yarn dev
+> yarn
+> yarn dev
 ```
 
 ## 🖥  View
