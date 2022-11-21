@@ -1,12 +1,23 @@
+import { useRef } from "react";
 import Button from "../../../UI/Button";
 import Input from "../../../UI/Input";
 import classes from "./classes.module.css";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
-const MealItemForm = ({ id }) => {
+const MealItemForm = ({ id, onAddItem }) => {
+	const inputRef = useRef();
+
+	const onSubmitHandler = (event) => {
+		event.preventDefault();
+		const amount = +inputRef.current.value;
+		onAddItem(amount);
+		inputRef.current.value = "";
+	};
+
 	return (
-		<form className={classes["item-form"]}>
+		<form className={classes["item-form"]} onSubmit={onSubmitHandler}>
 			<Input
+				ref={inputRef}
 				input={{
 					id,
 					type: "number",
@@ -16,7 +27,7 @@ const MealItemForm = ({ id }) => {
 				}}
 			/>
 			<div className={classes["item-form__button"]}>
-				<Button>
+				<Button type='submit'>
 					<AiOutlinePlusCircle />
 					Add
 				</Button>
