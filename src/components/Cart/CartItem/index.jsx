@@ -7,7 +7,7 @@ const CartItem = ({ meal: { id, name, price, amount } }) => {
 	const { addItem, removeItem } = useContext(CartContext);
 
 	const addItemHandler = () => {
-		addItem({ id, name, price, amount });
+		addItem({ id, name, price, amount: 1 });
 	};
 
 	const formatPrice = `$${price.toFixed(2)}`;
