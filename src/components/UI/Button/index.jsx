@@ -1,8 +1,9 @@
 import classes from "./classes.module.css";
 
-const Button = ({ children }) => {
+const Button = ({ onClick, children, type = "button", kind = "primary" }) => {
+	const newClasses = `${classes.button} ${classes[`button-${kind}`]}`;
 	return (
-		<button type='button' className={classes.button}>
+		<button onClick={onClick} type={type} className={newClasses}>
 			{children}
 		</button>
 	);

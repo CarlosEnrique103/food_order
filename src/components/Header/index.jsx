@@ -3,7 +3,7 @@ import foodBackground from "./../../assets/header.jpg";
 import HeaderButton from "./HeaderButton";
 import classes from "./classes.module.css";
 import Meal from "./../../assets/icon/food.svg";
-const Header = () => {
+const Header = ({ onShownCart }) => {
 	return (
 		<Fragment>
 			<div className={classes.header}>
@@ -11,12 +11,10 @@ const Header = () => {
 					<img src={Meal} alt='Icon meal' />
 					<h1>ReactJS Food</h1>
 				</div>
-
-				<HeaderButton />
+				<HeaderButton onClick={onShownCart} />
 			</div>
-
 			<div className={classes["header-image"]}>
-				<img src={foodBackground} alt='Portal images' />
+				<img src={foodBackground} alt='Food header' />
 			</div>
 		</Fragment>
 	);

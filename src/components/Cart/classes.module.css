@@ -1,0 +1,31 @@
+.cart {
+  width: 500px;
+}
+.cart ul{
+  max-height: 20rem;
+  overflow: auto;
+}
+
+.cart-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-top: 1px solid var(--primary-color) ;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.cart-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.cart-buttons div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+}

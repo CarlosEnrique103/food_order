@@ -1,7 +1,7 @@
 import classes from "./classes.module.css";
-import ItemForm from "./ItemForm";
+import MealItemForm from "./MealItemForm";
 
-const Item = ({ id, name, description, price }) => {
+const MealItem = ({ id, name, description, price }) => {
 	return (
 		<li key={id} className={classes.item}>
 			<div className={classes["item-description"]}>
@@ -9,9 +9,9 @@ const Item = ({ id, name, description, price }) => {
 				<p>{description}</p>
 				<span>{`$${price.toFixed(2)}`}</span>
 			</div>
-			<ItemForm />
+			<MealItemForm id={id} />
 		</li>
 	);
 };
 
-export default Item;
+export default MealItem;

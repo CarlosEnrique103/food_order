@@ -7,11 +7,12 @@ const Overlay = ({ onClick }) => (
 	<div onClick={onClick} className={classes.overlay}></div>
 );
 
-const ModalContent = ({ children }) => (
-	<Card className={classes["modal-content"]}>{children}</Card>
-);
+const ModalContent = ({ children, className }) => {
+	const newClasses = `${classes["modal-content"]} ${className}`;
+	return <Card className={newClasses}>{children}</Card>;
+};
 
-const Modal = ({ children, onClick }) => {
+const Modal = ({ children, onClick, className }) => {
 	return (
 		<Fragment>
 			{ReactDOM.createPortal(
@@ -19,7 +20,7 @@ const Modal = ({ children, onClick }) => {
 				document.getElementById("root-backdrop")
 			)}
 			{ReactDOM.createPortal(
-				<ModalContent>{children}</ModalContent>,
+				<ModalContent className={className}>{children}</ModalContent>,
 				document.getElementById("root-modal")
 			)}
 		</Fragment>

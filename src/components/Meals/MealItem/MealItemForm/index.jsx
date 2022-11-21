@@ -3,21 +3,26 @@ import Input from "../../../UI/Input";
 import classes from "./classes.module.css";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
-const ItemForm = () => {
+const MealItemForm = ({ id }) => {
 	return (
-		<div className={classes["item-form"]}>
-			<div className={classes["item-form__amount"]}>
-				<span>Amount</span>
-				<Input type='number' value={0} />
-			</div>
+		<form className={classes["item-form"]}>
+			<Input
+				input={{
+					id,
+					type: "number",
+					min: 1,
+					max: 5,
+					label: "Amount",
+				}}
+			/>
 			<div className={classes["item-form__button"]}>
 				<Button>
 					<AiOutlinePlusCircle />
 					Add
 				</Button>
 			</div>
-		</div>
+		</form>
 	);
 };
 
-export default ItemForm;
+export default MealItemForm;

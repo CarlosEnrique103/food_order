@@ -1,0 +1,13 @@
+
+.item-form {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-form__button {
+  text-align: left;
+  width: 60%;
+  margin-left: 40%;
+}

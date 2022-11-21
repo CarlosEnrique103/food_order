@@ -1,4 +1,18 @@
 .input {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 10px;
+ margin-bottom: 10px;
+}
+
+.input label {
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.input input {
   border: none;
   width: 100%;
   border: 1px solid var(--gray-color);
