@@ -32,6 +32,31 @@ const cartReducer = (state, action) => {
 			items: updatedItems,
 		};
 	}
+	if (action.type === "REMOVE_ITEM") {
+		let itemFindIndex = state.items.findIndex(
+			(item) => item.id === action.payload
+		);
+		let itemFind = state.items[itemFindIndex];
+		let updatedItems;
+
+		if (itemFind?.amount === 1) {
+			updatedItems = state.items.filter((item) => item.id !== action.payload);
+		} else {
+			const updatedItem = {
+				...itemFind,
+				amount: itemFind.amount - 1,
+			};
+			updatedItems = [...state.items];
+			updatedItems[itemFindIndex] = updatedItem;
+		}
+
+		const updatedTotal = state.totalAmount - itemFind.price;
+
+		return {
+			totalAmount: updatedTotal,
+			items: updatedItems,
+		};
+	}
 	return state;
 };
 
@@ -41,7 +66,10 @@ const CartProvider = ({ children }) => {
 		dispatchCart({ type: "ADD_ITEM", payload: item });
 	};
 
-	const removeItemHandler = (id) => {};
+	const removeItemHandler = (id) => {
+		console.log({ id });
+		dispatchCart({ type: "REMOVE_ITEM", payload: id });
+	};
 
 	const value = {
 		items: cartState.items,
