@@ -15,6 +15,7 @@ const Cart = ({ onClose }) => {
 			))}
 		</ul>
 	);
+
 	const formatTotal = `$${totalAmount.toFixed(2)}`;
 
 	return (

@@ -67,7 +67,6 @@ const CartProvider = ({ children }) => {
 	};
 
 	const removeItemHandler = (id) => {
-		console.log({ id });
 		dispatchCart({ type: "REMOVE_ITEM", payload: id });
 	};
 
