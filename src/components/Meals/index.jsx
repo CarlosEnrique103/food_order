@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Summary from "./Summary";
 import classes from "./classes.module.css";
 import List from "./List";
