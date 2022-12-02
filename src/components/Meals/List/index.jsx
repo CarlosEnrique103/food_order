@@ -2,6 +2,7 @@ import { useEffect, useState, memo } from "react";
 import Card from "../../UI/Card";
 import MealItem from "../MealItem";
 import classes from "./classes.module.css";
+import { uri } from "../../../const/url";
 
 const List = () => {
 	const [meals, setMeals] = useState([]);
@@ -10,9 +11,7 @@ const List = () => {
 
 	useEffect(() => {
 		const fetchMeals = async () => {
-			const response = await fetch(
-				"https://fetch-api-a5164-default-rtdb.firebaseio.com/meals.json"
-			);
+			const response = await fetch(`${uri}/meals.json`);
 			if (!response.ok) {
 				throw new Error("Something went wrong!");
 			}

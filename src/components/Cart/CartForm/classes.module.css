@@ -1,0 +1,24 @@
+.form {
+  width: 70%;
+  margin-top: 10px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 10px
+}
+
+
+.form_control input{
+  border: 1px solid var(--gray-color);
+  padding: 10px 5px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px
+}
