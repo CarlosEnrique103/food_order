@@ -38,7 +38,7 @@ const Cart = ({ onClose }) => {
 			items: items,
 		};
 		await fetchSendOrder(order);
-		clearItems();
+		setConfirmOrder(true);
 	};
 
 	const onDoneHandler = () => {
