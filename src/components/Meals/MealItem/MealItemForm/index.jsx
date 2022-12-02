@@ -10,6 +10,9 @@ const MealItemForm = ({ id, onAddItem }) => {
 	const onSubmitHandler = (event) => {
 		event.preventDefault();
 		const amount = +inputRef.current.value;
+		if (!amount) {
+			return;
+		}
 		onAddItem(amount);
 		inputRef.current.value = "";
 	};

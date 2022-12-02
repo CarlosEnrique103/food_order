@@ -21,7 +21,6 @@ const Cart = ({ onClose }) => {
 		</ul>
 	);
 
-	console.log({ uri });
 	const sendOrderHandler = () => {
 		setShowCartForm(true);
 	};
